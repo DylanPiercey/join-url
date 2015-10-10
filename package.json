@@ -1,6 +1,6 @@
 {
   "name": "join-url",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Like `path.join` but for urls.",
   "author": "Dylan Piercey <pierceydylan@gmail.com>",
   "main": "index.js",

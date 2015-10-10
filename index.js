@@ -14,6 +14,7 @@ function joinPathName () {
 	}
 	
 	return arr
+		.filter(exists)
 		.join("/")
 		.replace(/\/+/g, '/')
 		.replace(/\/$/,  '');
@@ -29,6 +30,7 @@ function joinHostName () {
 	}
 	
 	return arr
+		.filter(exists)
 		.join(".")
 		.replace(/^\./,  '')
 		.replace(/\.+/g, '.')
@@ -45,8 +47,16 @@ function joinQuery () {
 	}
 	
 	return arr
+		.filter(exists)
 		.join("&")
 		.replace(/^&/,  '')
 		.replace(/&+/g, '&')
 		.replace(/&$/,  '');
+}
+
+/**
+ * Utility to check if a value exists.
+ */
+function exists (val) {
+	return val != null
 }
