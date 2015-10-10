@@ -4,49 +4,22 @@ var join   = require("../");
 describe("join-url", function () {
 	it("should join paths", function () {
 		assert.equal(
-			join("/a", "/b"),
-			"/a/b"
+			join.pathname("/admin/", "dashboard/", "/messages", "new"),
+			"/admin/dashboard/messages/new"
 		);
+	});
 
+	it("should join hosts", function () {
 		assert.equal(
-			join("/a", "b"),
-			"/a/b"
+			join.hostname(".sub.", "domain.", ".co", "uk"),
+			"sub.domain.co.uk"
 		);
 	});
 
 	it("should join a querystring", function () {
 		assert.equal(
-			join("/a", "/?test=1"),
-			"/a?test=1"
-		);
-
-		assert.equal(
-			join("/a", "?test=1"),
-			"/a?test=1"
-		);
-	});
-
-	it("should join a hash", function () {
-		assert.equal(
-			join("/a", "/#test"),
-			"/a#test"
-		);
-
-		assert.equal(
-			join("/a", "#test"),
-			"/a#test"
-		);
-	});
-
-	it("should join a url with a protocol", function () {
-		assert.equal(
-			join("http://test.com/a", "/b"),
-			"http://test.com/a/b"
-		);
-
-		assert.equal(
-			join("http://test.com/a", "b"),
-			"http://test.com/a/b"
+			join.query("&a=1&", "b=2&", "&c=3", "d=4"),
+			"a=1&b=2&c=3&d=4"
 		);
 	});
 });

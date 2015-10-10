@@ -13,8 +13,14 @@ npm install join-url
 ```javascript
 var join = require('join-url');
 
-join("http://test.com/a", "b", "/c", "?d=1", "/#e");
-//-> "http://test.com/a/b/c?d=1#e"
+join.pathname("/admin/", "dashboard/", "/messages", "new");
+//-> "/admin/dashboard/messages/new"
+
+join.hostname(".sub.", "domain.", ".co", "uk");
+//-> "sub.domain.co.uk"
+
+join.query("&a=1&", "b=2&", "&c=3", "d=4");
+//-> "a=1&b=2&c=3&d=4"
 ```
 
 ### Contributions
