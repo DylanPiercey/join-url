@@ -17,7 +17,7 @@ function joinPathName () {
 		.filter(exists)
 		.join("/")
 		.replace(/\/+/g, '/')
-		.replace(/\/$/,  '');
+		.replace(/.+\/$/,  '');
 }
 
 /**
@@ -34,7 +34,7 @@ function joinHostName () {
 		.join(".")
 		.replace(/^\./,  '')
 		.replace(/\.+/g, '.')
-		.replace(/\.$/,  '');
+		.replace(/.+\.$/,  '');
 }
 
 /**
@@ -51,7 +51,7 @@ function joinQuery () {
 		.join("&")
 		.replace(/^&/,  '')
 		.replace(/&+/g, '&')
-		.replace(/&$/,  '');
+		.replace(/.+&$/,  '');
 }
 
 /**
