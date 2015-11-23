@@ -4,6 +4,11 @@ var join   = require("../");
 describe("join-url", function () {
 	it("should join paths", function () {
 		assert.equal(
+			join.pathname("/admin/", "/"),
+			"/admin/"
+		);
+
+		assert.equal(
 			join.pathname("/admin/", "dashboard/", null, "/messages", "new"),
 			"/admin/dashboard/messages/new"
 		);

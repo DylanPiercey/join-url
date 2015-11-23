@@ -15,9 +15,8 @@ function joinPathName () {
 	
 	return arr
 		.filter(exists)
-		.join("/")
-		.replace(/\/+/g, '/')
-		.replace(/.+\/$/,  '');
+		.join('/')
+		.replace(/\/+/g, '/');
 }
 
 /**
@@ -31,10 +30,9 @@ function joinHostName () {
 	
 	return arr
 		.filter(exists)
-		.join(".")
+		.join('.')
 		.replace(/^\./,  '')
-		.replace(/\.+/g, '.')
-		.replace(/.+\.$/,  '');
+		.replace(/\.+/g, '.');
 }
 
 /**
@@ -48,10 +46,9 @@ function joinQuery () {
 	
 	return arr
 		.filter(exists)
-		.join("&")
+		.join('&')
 		.replace(/^&/,  '')
-		.replace(/&+/g, '&')
-		.replace(/.+&$/,  '');
+		.replace(/&+/g, '&');
 }
 
 /**
