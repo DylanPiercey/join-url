@@ -1,3 +1,5 @@
+"use strict";
+
 module.exports = {
 	pathname: joinPathName,
 	hostname: joinHostName,
@@ -12,7 +14,7 @@ function joinPathName () {
 	for (var i = arguments.length, arr = new Array(i); i--;) {
 		arr[i] = arguments[i];
 	}
-	
+
 	return arr
 		.filter(exists)
 		.join('/')
@@ -27,7 +29,7 @@ function joinHostName () {
 	for (var i = arguments.length, arr = new Array(i); i--;) {
 		arr[i] = arguments[i];
 	}
-	
+
 	return arr
 		.filter(exists)
 		.join('.')
@@ -43,7 +45,7 @@ function joinQuery () {
 	for (var i = arguments.length, arr = new Array(i); i--;) {
 		arr[i] = arguments[i];
 	}
-	
+
 	return arr
 		.filter(exists)
 		.join('&')
