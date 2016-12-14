@@ -4,7 +4,5 @@
 # OSX
 *.DS_Store
 
+# NPM
 node_modules
-
-# Compiled JS
-bin
