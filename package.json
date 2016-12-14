@@ -1,7 +1,7 @@
 {
   "name": "join-url",
   "description": "Like `path.join` but for urls.",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "author": "Dylan Piercey <pierceydylan@gmail.com>",
   "bugs": "https://github.com/DylanPiercey/join-url/issues",
   "devDependencies": {
